@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tuğla Kırma</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game-card">
+    <header>
+      <div>
+        <p class="eyebrow">KÜÇÜK BİR ARCADE MOLASI</p>
+        <h1>Tuğla <span>Kırma</span></h1>
+      </div>
+
+      <div class="stats" aria-label="Oyun bilgileri">
+        <div class="score-box">
+          PUAN
+          <strong id="score">0</strong>
+        </div>
+
+        <div class="score-box">
+          REKOR
+          <strong id="best">0</strong>
+        </div>
+
+        <div class="score-box">
+          CAN
+          <strong id="lives">3</strong>
+        </div>
+
+        <div class="score-box">
+          SEVİYE
+          <strong id="level">1</strong>
+        </div>
+      </div>
+    </header>
+
+    <p class="description">
+      Yeni dizilimleri keşfet, hediyeleri yakala ve rekorunu geliştir.
+    </p>
+
+    <div class="board">
+      <canvas
+        id="game"
+        width="800"
+        height="520"
+        tabindex="0"
+        aria-label="Tuğla kırma oyun alanı. Ok tuşlarıyla hareket edin, ateş hediyesiyle boşluk tuşunu kullanın."
+      >
+        Bu oyunu oynamak için canvas destekleyen bir tarayıcı kullanın.
+      </canvas>
+
+      <div id="overlay" class="overlay">
+        <span class="badge">OYUNA HAZIR MISIN?</span>
+        <h2 id="message">Bir top, bolca renk.</h2>
+        <p id="detail">
+          Başlat'a bas ve raketi ok tuşlarıyla hareket ettir.
+        </p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <p>
+        <kbd>←</kbd> <kbd>→</kbd> Hareket
+        &nbsp;
+        <kbd>Boşluk</kbd> Ateş hediyesiyle ateş
+      </p>
+
+      <div class="buttons">
+        <button id="start">Başlat</button>
+        <button id="restart" class="secondary">Yeniden Başlat</button>
+      </div>
+    </div>
+
+    <p class="gift-guide">
+      BÜYÜT / KÜÇÜLT: 10 sn · ATEŞ: 10 sn · SEVİYE +: doğrudan geçiş
+    </p>
+
+    <p class="gift-guide">
+      Her bölüm farklı! 3. seviyeden itibaren bazı tuğlalar
+      birden fazla vuruş ister.
+    </p>
+
+    <p id="status" class="status" role="status" aria-live="polite">
+      Her 4 tuğlada bir hediye! Düşen kutuları raketle yakala.
+    </p>
+  </main>
+</body>
+</html>
